@@ -1,0 +1,9 @@
+.terraform
+.terraform.tfstate.lock.info
+terraform.tfstate.backup
+payload.zip
+
+# Normally you will want to keep track of the state, so please delete the
+# following lines after you clone the repo:
+.terraform.lock.hcl
+terraform.tfstate
