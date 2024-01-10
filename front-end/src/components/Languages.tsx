@@ -9,7 +9,7 @@ export type LanguagesProps = {
 
 const LanguagesInternal = ({ languages, lang, endOfSlug }: LanguagesProps) => {
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center bg-fuchsia-400">
       <ul className="flex gap-4 text-lg">
         {languages.map((a) => (
           <li key={a} className={clsx("uppercase", a === lang && "font-bold")}>

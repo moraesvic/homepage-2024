@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 interface Props {
   title: string;
 }
@@ -16,10 +18,15 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <div class="w-full bg-black p-2 text-white grid place-items-center">
+  <body
+    style={{
+      background: "url(/marble.jpeg) no-repeat center center fixed",
+      backgroundSize: "cover",
+    }}
+  >
+    <div class="w-full p-2 text-white grid place-items-center">
       <div
-        class="max-w-[80ch] flex flex-col gap-2 pb-10"
+        class="max-w-[96ch] flex flex-col gap-2"
         style={{ minHeight: "100vh" }}
       >
         <slot />
@@ -27,10 +34,3 @@ const { title } = Astro.props;
     </div>
   </body>
 </html>
-<style is:global>
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
-</style>
