@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CV from "../../components/CV";
+import Languages from "../../components/Languages";
+import { getCollection } from "astro:content";
+import type { CVProps } from "../../content/config";
+
+export async function getStaticPaths() {
+  return (await getCollection("cv")).map(({ id, data }) => {
+    const lang = id.replace(/\.md$/, "");
+    return {
+      params: { lang },
+      props: { ...data, lang },
+    };
+  });
+}
+
+const props = Astro.props as CVProps;
+---
+
+<Layout title={`moraesvic: ${props["head.title"]}`}>
+  <CV {...props} />
+  <Languages lang={props.lang} endOfSlug="/cv" />
+</Layout>

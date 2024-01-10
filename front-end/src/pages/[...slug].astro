@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Home from "../components/Home";
+import type { HomeProps } from "../content/config";
+import Languages from "../components/Languages";
+
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  return (await getCollection("home")).map(({ id, data }) => {
+    const lang = id.replace(/\.md$/, "");
+    return {
+      params: { slug: lang },
+      props: { ...data, lang },
+    };
+  });
+}
+
+const props = Astro.props as HomeProps;
+const { lang } = props;
+---
+
+<Layout title="moraesvic">
+  <Home {...props} lang={lang} />
+  <Languages lang={lang} endOfSlug="" />
+</Layout>
