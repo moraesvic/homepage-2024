@@ -2,10 +2,10 @@
 head.title: résumé
 jobTitle: Full Stack Software Engineer
 introduction.title: Introduction
-introduction.text: Software engineer capable of full stack work, specializing in front-end technologies.
+introduction.text: Full Stack Software Engineer.
 techStack.title: Tech stack
 techStack.other.title: Other
-techStack.other.text: Tailwind, SCSS/Sass, Figma, TDD (Jest, xUnit), WebSockets, REST APIs, Git, Nginx, web scraping, Selenium, Pandas, FastAPI, Flask, Linux, Bash, Clean Code, SOLID, CI/CD, MongoDB, algorithms & data structures, functional programming, etc.
+techStack.other.text: Tailwind, SCSS/Sass, Figma, TDD (Jest, xUnit), WebSockets, REST APIs, Git, DynamoDB, MongoDB, Nginx, web scraping, Selenium, Pandas, FastAPI, Flask, Linux, Bash, Clean Code, SOLID, CI/CD, Haskell, Clojure, algorithms & data structures, ...
 languages.title: Languages
 english: English
 portuguese: Portuguese
@@ -15,7 +15,7 @@ visaStatus.title: Visa status
 visaStatus.text: A Brazilian citizen willing to relocate (visa sponsorship needed).
 education: Education
 bachLinguistics.title: Bach. in Linguistics
-bachLinguistics.description: "Faculty of Philosophy, Philology and Human Sciences (FFLCH). University of São Paulo (USP–Brazil). 2016 — 2020. Final grade: 9.2 / 10.0"
+bachLinguistics.description: "Faculty of Philosophy, Philology and Human Sciences (FFLCH). University of São Paulo (USP–Brazil). 2016 — 2020."
 exchangeProgram.title: Exchange Program
 exchangeProgram.description: Freie Universität Berlin, Germany. 1 semester. Exchange program with scholarship for academic excellence.
 bachCivilEngineering.title: Bach. Civil Eng.
@@ -32,13 +32,16 @@ brickAbode.items.1.description: customizing a WYSIWYG editor for creating real e
 bcg.title: Software Engineer
 bcg.companyName: BCG (The Boston Consulting Group)
 bcg.location: Brazil/Colombia/USA
-bcg.period: 2022-present
+bcg.period: 2022-2024
 bcg.items.0.title: Dynamic Pricing
-bcg.items.0.description: AI-based application for detecting pricing opportunities for a client in the electric vehicles industry
+bcg.items.0.description: AI-based application for detecting pricing opportunities for a Fortune-50 electric vehicle manufacturer
+bcg.items.1.title: Sentiment Analysis
+bcg.items.1.description: AI-based application for topic extraction and sentiment analysis of customer reviews in a Fortune-500 energy company
 labic.title: Software Engineer
 labic.companyName: LABIC (Civic Innovation Lab)
 labic.location: Panama/Mexico
 labic.period: 2022-present (volunteer work)
 labic.items.0.title: Cosecha Colectiva
 labic.items.0.description: crowdfunding platform for social banking initiative in rural Mexico
+footer.backToMainPage: Back to main page
 ---

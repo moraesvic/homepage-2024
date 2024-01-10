@@ -53,12 +53,15 @@ const CVSchema = z.object({
   "bcg.period": z.string(),
   "bcg.items.0.title": z.string(),
   "bcg.items.0.description": z.string(),
+  "bcg.items.1.title": z.string(),
+  "bcg.items.1.description": z.string(),
   "labic.title": z.string(),
   "labic.companyName": z.string(),
   "labic.location": z.string(),
   "labic.period": z.string(),
   "labic.items.0.title": z.string(),
   "labic.items.0.description": z.string(),
+  "footer.backToMainPage": z.string(),
 });
 
 const cvCollection = defineCollection({

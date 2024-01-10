@@ -12,8 +12,18 @@ export const Skills = ({ skills }: SkillsProps) => (
     className="grid gap-x-2 gap-y-[6px] my-3"
     style={{ gridTemplateColumns: "min-content minmax(0, 1fr)" }}
   >
-    {skills
-      .sort((a, b) => a.percentage - b.percentage)
+    {[...skills]
+      .sort((a, b) => {
+        if (a.percentage !== b.percentage) {
+          return a.percentage - b.percentage;
+        }
+
+        // In case of ties, use the one that comes first in th list
+        return (
+          skills.findIndex((x) => x.name === b.name) -
+          skills.findIndex((x) => x.name === a.name)
+        );
+      })
       .reverse()
       .map((a) => {
         const A = 0.7;

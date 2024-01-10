@@ -1,4 +1,4 @@
 ---
-jobTitle: Engenheiro de Software Full Stack
+jobTitle: Engenheiro de Software
 cv: Currículo
 ---

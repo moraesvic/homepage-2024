@@ -1,4 +1,4 @@
 ---
-jobTitle: Full Stack Software Engineer
+jobTitle: Software Engineer
 cv: Résumé
 ---

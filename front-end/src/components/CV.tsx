@@ -6,6 +6,7 @@ import { GitHubIcon } from "./GitHubIcon";
 import clsx from "clsx";
 import { LinkedInIcon } from "./LinkedInIcon";
 import { EmailIcon } from "./EmailIcon";
+import { Colors } from "./Colors";
 
 const H2 = (
   props: Omit<React.HTMLAttributes<HTMLHeadingElement>, "className">
@@ -87,17 +88,69 @@ const Box = (
   return <div className="bg-white m-2" {...props} />;
 };
 
-// bg-slate-950
-const bgColor = "rgba(2 6 23)";
+const BCG = (t: CVProps) => {
+  return (
+    <Company>
+      <CompanyHeader
+        title={t["bcg.title"]}
+        name={t["bcg.companyName"]}
+        location={t["bcg.location"]}
+        period={t["bcg.period"]}
+      />{" "}
+      <ProjectDescription
+        title={t["bcg.items.0.title"]}
+        description={t["bcg.items.0.description"]}
+        Technologies={[
+          Pills.React,
+          Pills.Javascript,
+          Pills.Python,
+          Pills.Postgres,
+          Pills.GCP,
+          Pills.Terraform,
+        ]}
+      />
+      <ProjectDescription
+        title={t["bcg.items.1.title"]}
+        description={t["bcg.items.1.description"]}
+        Technologies={[
+          Pills.Terraform,
+          Pills.AWS,
+          Pills.Python,
+          Pills.Postgres,
+        ]}
+      />
+    </Company>
+  );
+};
 
-// text-slate-100
-const textColor = "rgb(241 245 249)";
+// Currently out of use
+const Labic = (t: CVProps) => {
+  return (
+    <Company>
+      <CompanyHeader
+        title={t["labic.title"]}
+        name={t["labic.companyName"]}
+        location={t["labic.location"]}
+        period={t["labic.period"]}
+      />{" "}
+      <ProjectDescription
+        title={t["labic.items.0.title"]}
+        description={t["labic.items.0.description"]}
+        Technologies={[
+          Pills.Wordpress,
+          Pills.PHP,
+          Pills.Stripe,
+          Pills.Javascript,
+        ]}
+      />
+    </Company>
+  );
+};
 
 const CV = (t: CVProps) => {
   return (
-    <div className="w-full rounded relative">
-      <div className="absolute -z-10 bg-slate-950 opacity-80 top-0 bottom-0 right-0 left-0 rounded shadow-lg" />
-      <div className="p-2 md:p-4 text-slate-100 grid place-items-center ">
+    <div className="flex flex-col items-center gap-4">
+      <div className="w-full rounded p-2 md:p-4 bg-slate-950 bg-opacity-80 text-slate-100 grid place-items-center">
         <div
           className="grid gap-x-2 md:gap-x-4"
           style={{ gridTemplateColumns: "minmax(0, 45fr) minmax(0, 55fr)" }}
@@ -113,9 +166,9 @@ const CV = (t: CVProps) => {
             >
               <div className="flex gap-2 items-center text-center mb-2">
                 <LinkedInIcon
-                  fill1={textColor}
-                  fill2={bgColor}
-                  bgColor={bgColor}
+                  fill1={Colors.text}
+                  fill2={Colors.bg}
+                  bgColor={Colors.bg}
                   size={26}
                 />
                 <div>@victor-moraes</div>
@@ -127,7 +180,7 @@ const CV = (t: CVProps) => {
               className="text-2xs md:text-xs tracking-tight leading-none"
             >
               <div className="flex gap-2 items-center text-center mb-2">
-                <GitHubIcon fill={textColor} bgColor={bgColor} size={26} />
+                <GitHubIcon fill={Colors.text} bgColor={Colors.bg} size={26} />
                 <div>@moraesvic</div>
               </div>
             </a>
@@ -137,13 +190,7 @@ const CV = (t: CVProps) => {
               className="text-2xs md:text-xs tracking-tight leading-none"
             >
               <div className="flex gap-2 items-center text-center mb-2">
-                <EmailIcon
-                  // text-slate-100
-                  fill="rgb(241 245 249)"
-                  // bg-slate-900
-                  bgColor="rgb(15 23 42)"
-                  size={26}
-                />
+                <EmailIcon fill={Colors.text} bgColor={Colors.bg} size={26} />
                 <div>talkto@moraesvic.com</div>
               </div>
             </a>
@@ -178,19 +225,9 @@ const CV = (t: CVProps) => {
             </Column>
 
             <Column>
-              <H2>{t["education"]}</H2>
-              <Box>
-                <H3>{t["bachLinguistics.title"]}</H3>
-                <p className="text-sm">{t["bachLinguistics.description"]}</p>
-                <H3>{t["exchangeProgram.title"]}</H3>
-                <p className="text-sm">{t["exchangeProgram.description"]}</p>
-                <H3>{t["bachCivilEngineering.title"]}</H3>
-                <p className="text-sm">
-                  {t["bachInCivilEngineering.description"]}
-                </p>
-              </Box>
               <H2>{t["experience"]}</H2>
               <Box>
+                <BCG {...t} />
                 <Company>
                   <CompanyHeader
                     title={t["brickAbode.title"]}
@@ -219,48 +256,25 @@ const CV = (t: CVProps) => {
                     ]}
                   />
                 </Company>
-                <Company>
-                  <CompanyHeader
-                    title={t["bcg.title"]}
-                    name={t["bcg.companyName"]}
-                    location={t["bcg.location"]}
-                    period={t["bcg.period"]}
-                  />{" "}
-                  <ProjectDescription
-                    title={t["bcg.items.0.title"]}
-                    description={t["bcg.items.0.description"]}
-                    Technologies={[
-                      Pills.React,
-                      Pills.Javascript,
-                      Pills.Python,
-                      Pills.Postgres,
-                      Pills.GCP,
-                      Pills.Terraform,
-                    ]}
-                  />
-                </Company>
-                <Company>
-                  <CompanyHeader
-                    title={t["labic.title"]}
-                    name={t["labic.companyName"]}
-                    location={t["labic.location"]}
-                    period={t["labic.period"]}
-                  />{" "}
-                  <ProjectDescription
-                    title={t["labic.items.0.title"]}
-                    description={t["labic.items.0.description"]}
-                    Technologies={[
-                      Pills.Wordpress,
-                      Pills.PHP,
-                      Pills.Stripe,
-                      Pills.Javascript,
-                    ]}
-                  />
-                </Company>
+              </Box>
+
+              <H2>{t["education"]}</H2>
+              <Box>
+                <H3>{t["bachLinguistics.title"]}</H3>
+                <p className="text-sm">{t["bachLinguistics.description"]}</p>
+                <H3>{t["exchangeProgram.title"]}</H3>
+                <p className="text-sm">{t["exchangeProgram.description"]}</p>
+                <H3>{t["bachCivilEngineering.title"]}</H3>
+                <p className="text-sm">
+                  {t["bachInCivilEngineering.description"]}
+                </p>
               </Box>
             </Column>
           </div>
         </div>
+      </div>
+      <div className="grid place-items-center bg-slate-950 bg-opacity-80 px-2 py-1">
+        <a href={`/${t.lang}`}>{t["footer.backToMainPage"]}</a>
       </div>
     </div>
   );
