@@ -1,0 +1,7 @@
+node_modules/
+dist/
+main.mjs
+payload.zip
+.terraform
+.terraform.tfstate.lock.info
+terraform.tfstate.backup
