@@ -1,0 +1,18 @@
+{
+	"jobTitle": "Engenheiro de Software em Boston Consulting Group",
+	"introduction.text": "Eu crio aplicações web e pipelines de dados para aumentar a eficiência corporativa e entregar valor estratégico.",
+	"bio": [
+		[
+			{
+				"type": "text",
+				"text": "I've been fascinated with computers since I was a kid. In my teenage years, I dabbled with Pascal and Ruby and created some text-based games inspired by "
+			},
+			{
+				"type": "link",
+				"text": "Dwarf Fortress",
+				"url": "https://en.wikipedia.org/wiki/Dwarf_Fortress"
+			}
+		]
+	],
+	"cv": "Currículo"
+}

@@ -1,12 +1,63 @@
-import type { HomeProps } from "../content/config";
+import type { HomeProps, TextNode } from "../content/config";
 import { Colors } from "./Colors";
 import { EmailIcon } from "./EmailIcon";
 import { GitHubIcon } from "./GitHubIcon";
 import { LinkedInIcon } from "./LinkedInIcon";
 
-export const Home = (t: HomeProps) => {
+import "./Home.css";
+
+type BlockProps = {
+  title: string;
+  Content: () => JSX.Element;
+};
+
+type LinkProps = {
+  text: string;
+  url: string;
+};
+
+const Link = (props: LinkProps) => {
   return (
-    <div className="flex flex-col gap-8 md:grid md:grid-cols-2 md:gap-x-12 min-h-screen bg-slate-950 bg-opacity-80 p-4 md:p-8 rounded">
+    <a href={props.url} className="text-indigo-300 font-semibold">
+      {props.text}
+    </a>
+  );
+};
+
+const Block = (props: BlockProps) => {
+  return (
+    <div>
+      <h2 className="uppercase tracking-wider text-lg mb-4 text-indigo-300 font-semibold">
+        {props.title}
+      </h2>
+      <props.Content />
+    </div>
+  );
+};
+
+const TextRenderer = ({ nodes }: { nodes: TextNode[][] }) => {
+  return (
+    <div className="flex flex-col gap-4 font-light">
+      {nodes.map((paragraph, idx) => (
+        <p key={idx}>
+          {paragraph.map((node, idx) => {
+            if (node.type === "text") {
+              return <span key={idx}>{node.text}</span>;
+            }
+
+            return <Link key={idx} url={node.url} text={node.text} />;
+          })}
+        </p>
+      ))}
+    </div>
+  );
+};
+
+export const Home = (t: HomeProps) => {
+  console.log(JSON.stringify(t, null, 2));
+
+  return (
+    <div className="_grid min-h-screen bg-slate-950 bg-opacity-80 p-4 md:p-8 rounded">
       <div className="flex flex-col gap-12 md:justify-between">
         <div className="flex flex-col gap-4">
           <div>
@@ -37,7 +88,12 @@ export const Home = (t: HomeProps) => {
           </div>
         </div>
       </div>
-      <div>Actual content here</div>
+      <div>
+        <Block title="Bio" Content={() => <TextRenderer nodes={t.bio} />} />
+        <div>
+          <div>Designed in trololo</div>
+        </div>
+      </div>
     </div>
   );
 };

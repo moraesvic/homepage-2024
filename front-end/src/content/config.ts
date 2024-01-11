@@ -5,10 +5,25 @@ type Lang = {
   lang: Language;
 };
 
+const TextNode = z.union([
+  z.object({
+    type: z.literal("text"),
+    text: z.string(),
+  }),
+  z.object({
+    type: z.literal("link"),
+    text: z.string(),
+    url: z.string(),
+  }),
+]);
+
+export type TextNode = z.infer<typeof TextNode>;
+
 const HomeSchema = z.object({
   jobTitle: z.string(),
   cv: z.string(),
   "introduction.text": z.string(),
+  bio: TextNode.array().array(),
 });
 
 const homeCollection = defineCollection({

@@ -1,0 +1,94 @@
+{
+  "jobTitle": "Software Engineer at Boston Consulting Group",
+  "introduction.text": "I create web applications and data pipelines to increase corporate efficiency and deliver strategic value.",
+  "bio": [
+    [
+      {
+        "type": "text",
+        "text": "I've been fascinated with computers since I was a kid. In my teenage years, I dabbled with Pascal and Ruby and created some text-based games inspired by "
+      },
+      {
+        "type": "link",
+        "text": "Dwarf Fortress",
+        "url": "https://en.wikipedia.org/wiki/Dwarf_Fortress"
+      },
+      {
+        "type": "text",
+        "text": "."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "In college I became more serious about programming, learning Python, developing numerical solving tools, "
+      },
+      {
+        "type": "link",
+        "text": "simple animations",
+        "url": "https://www.youtube.com/watch?v=fplE6zBv0q4"
+      },
+      {
+        "type": "text",
+        "text": ", taking part in "
+      },
+      {
+        "type": "link",
+        "text": "Artificial Intelligence study groups",
+        "url": "https://sitegrupoturing.netlify.app/"
+      },
+      {
+        "type": "text",
+        "text": " and "
+      },
+      {
+        "type": "link",
+        "text": "attending cryptography events",
+        "url": "https://2023.cryptorave.org/"
+      },
+      {
+        "type": "text",
+        "text": "."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "In my professional life, I have had the priviledge of working in "
+      },
+      {
+        "type": "link",
+        "text": "a government agency",
+        "url": "https://www.dwih-saopaulo.org"
+      },
+      {
+        "type": "text",
+        "text": ", in "
+      },
+      {
+        "type": "link",
+        "text": "a software house",
+        "url": "https://www.brickabode.com/"
+      },
+      {
+        "type": "text",
+        "text": " and in a "
+      },
+      {
+        "type": "link",
+        "text": "Big Four",
+        "url": "https://www.bcg.com/"
+      },
+      {
+        "type": "text",
+        "text": " consultancy firm."
+      }
+    ],
+    [
+      {
+        "type": "text",
+        "text": "In my free time, you will find me learning languages (currently, Mandarin Chinese), swimming, running, and singing at karaokes."
+      }
+    ]
+  ],
+  "cv": "Résumé"
+}
