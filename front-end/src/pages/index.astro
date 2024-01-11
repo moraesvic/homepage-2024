@@ -5,7 +5,7 @@ import Languages from "../components/Languages";
 
 import { getCollection } from "astro:content";
 
-const props = (await getCollection("home")).find((a) => a.slug === "en")!.data;
+const props = (await getCollection("home")).find((a) => a.id === "en")!.data;
 ---
 
 <Layout title="moraesvic">

@@ -29,6 +29,7 @@ const HomeSchema = z.object({
 });
 
 const homeCollection = defineCollection({
+  type: "data",
   schema: HomeSchema,
 });
 
