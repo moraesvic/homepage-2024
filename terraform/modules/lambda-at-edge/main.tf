@@ -1,6 +1,6 @@
 # Please note that upon `terraform destroy`, you are likely to raise this error:
 #
-#    Error: deleting Lambda Function (basic_authorization): operation error
+#    Error: deleting Lambda Function (redirect_to_index_html): operation error
 #    Lambda: DeleteFunction, https response error StatusCode: 400, RequestID:
 #    [...], InvalidParameterValueException: Lambda was unable to delete
 #    arn:aws:lambda:us-east-1:[...] because it is a replicated function.
@@ -15,7 +15,7 @@
 # https://advancedweb.hu/how-to-use-lambda-edge-with-terraform/
 
 locals {
-	function_name = "basic_authorization"
+	function_name = "redirect_to_index_html"
 	lambda_source_file = "../lambda-at-edge/dist/main.mjs"
 }
 
@@ -87,7 +87,7 @@ data archive_file lambda {
   output_path = "payload.zip"
 }
 
-resource aws_lambda_function basic_authorization {
+resource aws_lambda_function redirect_to_index_html {
   function_name = local.function_name
   runtime = "nodejs20.x"
 

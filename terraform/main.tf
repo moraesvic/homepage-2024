@@ -3,13 +3,8 @@ provider aws {
   region = "us-east-1"
 }
 
-resource random_id project_suffix {
-  byte_length = 2
-}
-
 locals {
-  project_name = "vikipedia"
-  project_name_qualified = "${local.project_name}-${random_id.project_suffix.hex}"
+  project_name = "moraesvic-homepage-2024"
 }
 
 module lambda_at_edge {
@@ -20,7 +15,6 @@ module lambda_at_edge {
 module s3 {
   source = "./modules/s3"
   project_name = local.project_name
-  project_name_qualified = local.project_name_qualified
 }
 
 module cloudfront {

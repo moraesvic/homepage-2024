@@ -3,8 +3,8 @@ locals {
 }
 
 resource aws_cloudfront_origin_access_control cf_oac {
-  name = "vikipedia_cf_origin_access_control"
-  description = "Vikipedia CF Origin Access Control"
+  name = "moraesvic_cf_origin_access_control"
+  description = "moraesvic CF Origin Access Control"
   origin_access_control_origin_type = "s3"
   signing_behavior = "always"
   signing_protocol = "sigv4"
@@ -19,11 +19,12 @@ resource aws_cloudfront_distribution s3_distribution {
 
   enabled             = true
   is_ipv6_enabled     = true
-  comment             = "Vikipedia (now Terraformized)"
+  comment             = "moraesvic homepage"
   default_root_object = "index.html"
 
   aliases = [
-    "vikipedia.moraesvic.com"
+    "moraesvic.com",
+    "www.moraesvic.com",
   ]
 
   price_class = "PriceClass_All"

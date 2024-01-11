@@ -1,7 +1,7 @@
-output main_bucket {
-	value = aws_s3_bucket.main_bucket
+output main {
+	value = aws_s3_bucket.main
 }
 
-output logs_bucket {
-	value = aws_s3_bucket.cloudfront_logs_bucket
+output cloudfront_logs {
+	value = aws_s3_bucket.cloudfront_logs
 }

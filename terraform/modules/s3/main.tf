@@ -1,26 +1,13 @@
-locals {
-  front_end_directory = "../front-end/dist"
-}
-
-resource aws_s3_bucket main_bucket {
+resource aws_s3_bucket main {
   bucket = var.project_name_qualified
-
-  # On `terraform destroy`, automatically empties bucket before deleting it
-  # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#force_destroy
-  force_destroy = true
 
   tags = {
     project = var.project_name
   }
 }
 
-resource aws_s3_bucket cloudfront_logs_bucket {
+resource aws_s3_bucket cloudfront_logs {
   bucket = "${var.project_name_qualified}-logs"
-
-  # On `terraform destroy`, automatically empties bucket before deleting it
-  # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#force_destroy
-  force_destroy = true
-
 
   tags = {
     project = var.project_name
@@ -30,23 +17,23 @@ resource aws_s3_bucket cloudfront_logs_bucket {
 # It is required to turn on ACL access to have logs:
 # https://stackoverflow.com/a/76417890/17030712
 
-resource aws_s3_bucket_ownership_controls cloudfront_logs_bucket {
-  bucket = aws_s3_bucket.cloudfront_logs_bucket.id
+resource aws_s3_bucket_ownership_controls cloudfront_logs {
+  bucket = aws_s3_bucket.cloudfront_logs.id
 
   rule {
     object_ownership = "BucketOwnerPreferred"
   }
 }
 
-resource aws_s3_bucket_acl cloudfront_logs_bucket {
-  depends_on = [ aws_s3_bucket_ownership_controls.cloudfront_logs_bucket ]
+resource aws_s3_bucket_acl cloudfront_logs {
+  depends_on = [ aws_s3_bucket_ownership_controls.cloudfront_logs ]
 
-  bucket = aws_s3_bucket.cloudfront_logs_bucket.id
+  bucket = aws_s3_bucket.cloudfront_logs.id
   acl    = "private"
 }
 
 resource aws_s3_bucket_versioning bucket_versioning {
-  bucket = aws_s3_bucket.main_bucket.id
+  bucket = aws_s3_bucket.main.id
   versioning_configuration {
     status = "Enabled"
   }
@@ -83,18 +70,3 @@ locals {
   default_content_type = "application/octet-stream"
 }
 
-resource aws_s3_object files {
-  # https://developer.hashicorp.com/terraform/language/functions/fileset
-  for_each = fileset(local.front_end_directory, "**")
-
-  bucket = aws_s3_bucket.main_bucket.id
-  key = each.value
-  source = "${local.front_end_directory}/${each.value}"
-  etag = filemd5("${local.front_end_directory}/${each.value}")
-
-  content_type = lookup(
-    local.content_type_map,
-    reverse(split(".", each.value))[0],
-    local.default_content_type
-  )
-}
