@@ -89,7 +89,7 @@ const Column = ({
 }: Omit<React.HTMLAttributes<HTMLDivElement>, "style">) => {
   return (
     <div
-      className={clsx("bg-white text-black md:h-full md:mb-2", className)}
+      className={clsx("bg-white text-black lg:h-full lg:mb-2", className)}
       {...rest}
     />
   );
@@ -165,19 +165,19 @@ const Labic = (t: CVProps) => {
 const CV = (t: CVProps) => {
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="w-full rounded p-2 md:p-4 bg-slate-950 bg-opacity-80 text-slate-100 grid place-items-center">
+      <div className="w-full rounded p-2 lg:p-8 bg-slate-950 bg-opacity-80 text-slate-100 grid place-items-center">
         <div
-          className="grid gap-x-2 md:gap-x-4"
+          className="grid gap-x-2 lg:gap-x-8"
           style={{ gridTemplateColumns: "minmax(0, 45fr) minmax(0, 55fr)" }}
         >
           <div className="text-2xl font-semibold">
             <a href={`/${t.lang}`}>Victor Moraes</a>
           </div>
-          <div className="row-span-2 flex items-center justify-start gap-2 md:justify-between md:gap-0 flex-wrap">
+          <div className="row-span-2 flex items-center justify-start gap-2 lg:justify-between lg:gap-0 flex-wrap">
             <a
               title="LinkedIn profile"
               href="https://www.linkedin.com/in/victor-moraes/"
-              className="text-2xs md:text-xs tracking-tight leading-none"
+              className="text-2xs lg:text-xs tracking-tight leading-none"
             >
               <div className="flex gap-2 items-center text-center mb-2">
                 <LinkedInIcon
@@ -192,7 +192,7 @@ const CV = (t: CVProps) => {
             <a
               title="GitHub profile"
               href="https://github.com/moraesvic"
-              className="text-2xs md:text-xs tracking-tight leading-none"
+              className="text-2xs lg:text-xs tracking-tight leading-none"
             >
               <div className="flex gap-2 items-center text-center mb-2">
                 <GitHubIcon fill={Colors.text} bgColor={Colors.bg} size={26} />
@@ -202,7 +202,7 @@ const CV = (t: CVProps) => {
             <a
               title="Email"
               href="mailto:talkto@moraesvic.com"
-              className="text-2xs md:text-xs tracking-tight leading-none"
+              className="text-2xs lg:text-xs tracking-tight leading-none"
             >
               <div className="flex gap-2 items-center text-center mb-2">
                 <EmailIcon fill={Colors.text} bgColor={Colors.bg} size={26} />
@@ -212,7 +212,7 @@ const CV = (t: CVProps) => {
           </div>
           <div className="text-base mb-1">{t.jobTitle}</div>
 
-          <div className="flex col-span-2 flex-wrap sm:contents">
+          <div className="flex col-span-2 flex-wrap lg:contents">
             <Column>
               <H2>{t["introduction.title"]}</H2>
               <Box>

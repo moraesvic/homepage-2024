@@ -54,11 +54,9 @@ const TextRenderer = ({ nodes }: { nodes: TextNode[][] }) => {
 };
 
 export const Home = (t: HomeProps) => {
-  console.log(JSON.stringify(t, null, 2));
-
   return (
-    <div className="_grid min-h-screen bg-slate-950 bg-opacity-80 p-4 md:p-8 rounded">
-      <div className="flex flex-col gap-12 md:justify-between">
+    <div className="_grid min-h-screen bg-slate-950 bg-opacity-80 p-4 sm:p-8 rounded">
+      <div className="flex flex-col gap-12 md:gap-24">
         <div className="flex flex-col gap-4">
           <div>
             <h1 className="text-3xl">Victor Moraes</h1>
@@ -88,10 +86,25 @@ export const Home = (t: HomeProps) => {
           </div>
         </div>
       </div>
-      <div>
-        <Block title="Bio" Content={() => <TextRenderer nodes={t.bio} />} />
+      <div className="flex flex-col gap-8">
         <div>
-          <div>Designed in trololo</div>
+          <Block title="Bio" Content={() => <TextRenderer nodes={t.bio} />} />
+        </div>
+        <div>
+          <div className="px-16 py-8">
+            <hr className="opacity-80" />
+          </div>
+          <TextRenderer
+            nodes={[
+              [
+                ...t.builtWith[0],
+                {
+                  type: "text",
+                  text: ` © Victor Moraes, ${new Date().getFullYear()}.`,
+                },
+              ],
+            ]}
+          />
         </div>
       </div>
     </div>

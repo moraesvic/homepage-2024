@@ -24,6 +24,8 @@ const HomeSchema = z.object({
   cv: z.string(),
   "introduction.text": z.string(),
   bio: TextNode.array().array(),
+  experience: TextNode.array().array(),
+  builtWith: TextNode.array().array(),
 });
 
 const homeCollection = defineCollection({

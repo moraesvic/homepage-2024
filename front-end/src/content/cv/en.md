@@ -14,7 +14,7 @@ german: German
 visaStatus.title: Visa status
 visaStatus.text: A Brazilian citizen willing to work remotely relocate.
 education: Education
-bachLinguistics.title: Bach. in Linguistics
+bachLinguistics.title: Bach. Linguistics
 bachLinguistics.description: "Faculty of Philosophy, Philology and Human Sciences (FFLCH). University of São Paulo (USP–Brazil). 2016 — 2020."
 exchangeProgram.title: Exchange Program
 exchangeProgram.description: Freie Universität Berlin, Germany. 1 semester. Exchange program with scholarship for academic excellence. 2020.

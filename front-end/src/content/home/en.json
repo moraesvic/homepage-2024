@@ -90,5 +90,50 @@
       }
     ]
   ],
+  "experience": [],
+  "builtWith": [
+    [
+      {
+        "type": "text",
+        "text": "Built with "
+      },
+      {
+        "type": "link",
+        "text": "Astro",
+        "url": "https://astro.build/"
+      },
+      {
+        "type": "text",
+        "text": ", "
+      },
+      {
+        "type": "link",
+        "text": "React",
+        "url": "https://react.dev/"
+      },
+      {
+        "type": "text",
+        "text": " & "
+      },
+      {
+        "type": "link",
+        "text": "TailwindCSS",
+        "url": "https://tailwindcss.com/"
+      },
+      {
+        "type": "text",
+        "text": ". Deployed to "
+      },
+      {
+        "type": "link",
+        "text": "Amazon Web Services (AWS)",
+        "url": "https://aws.amazon.com"
+      },
+      {
+        "type": "text",
+        "text": "."
+      }
+    ]
+  ],
   "cv": "Résumé"
 }
