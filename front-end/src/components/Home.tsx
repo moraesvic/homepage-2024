@@ -6,7 +6,7 @@ import { LinkedInIcon } from "./LinkedInIcon";
 
 export const Home = ({ jobTitle, cv, lang }: HomeProps) => {
   return (
-    <div className="bg-slate-950 bg-opacity-80 p-4 rounded flex flex-col items-center gap-8">
+    <div className="min-w-96 bg-slate-950 bg-opacity-80 p-4 rounded flex flex-col items-center gap-8">
       <h1 className="text-2xl">
         <a href={`/${lang}`}>moraesvic.com</a>
       </h1>
@@ -18,14 +18,20 @@ export const Home = ({ jobTitle, cv, lang }: HomeProps) => {
         <a href={`/${lang}/cv`}>{cv}</a>
       </div>
       <div className="flex gap-4">
-        <LinkedInIcon
-          fill1={Colors.text}
-          fill2={Colors.bg}
-          bgColor={Colors.bg}
-          size={24}
-        />
-        <GitHubIcon fill={Colors.text} bgColor={Colors.bg} size={24} />
-        <EmailIcon fill={Colors.text} bgColor={Colors.bg} size={24} />
+        <a href="https://www.linkedin.com/in/victor-moraes/">
+          <LinkedInIcon
+            fill1={Colors.text}
+            fill2={Colors.bg}
+            bgColor={Colors.bg}
+            size={24}
+          />
+        </a>
+        <a href="https://github.com/moraesvic">
+          <GitHubIcon fill={Colors.text} bgColor={Colors.bg} size={24} />
+        </a>
+        <a href="mailto:talkto@moraesvic.com">
+          <EmailIcon fill={Colors.text} bgColor={Colors.bg} size={24} />
+        </a>
       </div>
     </div>
   );

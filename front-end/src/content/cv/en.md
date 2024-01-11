@@ -2,7 +2,7 @@
 head.title: résumé
 jobTitle: Full Stack Software Engineer
 introduction.title: Introduction
-introduction.text: Full Stack Software Engineer.
+introduction.text: I create web applications and data pipelines to increase corporate efficiency and deliver strategic value.
 techStack.title: Tech stack
 techStack.other.title: Other
 techStack.other.text: Tailwind, SCSS/Sass, Figma, TDD (Jest, xUnit), WebSockets, REST APIs, Git, DynamoDB, MongoDB, Nginx, web scraping, Selenium, Pandas, FastAPI, Flask, Linux, Bash, Clean Code, SOLID, CI/CD, Haskell, Clojure, algorithms & data structures, ...
@@ -12,12 +12,12 @@ portuguese: Portuguese
 spanish: Spanish
 german: German
 visaStatus.title: Visa status
-visaStatus.text: A Brazilian citizen willing to relocate (visa sponsorship needed).
+visaStatus.text: A Brazilian citizen willing to work remotely relocate.
 education: Education
 bachLinguistics.title: Bach. in Linguistics
 bachLinguistics.description: "Faculty of Philosophy, Philology and Human Sciences (FFLCH). University of São Paulo (USP–Brazil). 2016 — 2020."
 exchangeProgram.title: Exchange Program
-exchangeProgram.description: Freie Universität Berlin, Germany. 1 semester. Exchange program with scholarship for academic excellence.
+exchangeProgram.description: Freie Universität Berlin, Germany. 1 semester. Exchange program with scholarship for academic excellence. 2020.
 bachCivilEngineering.title: Bach. Civil Eng.
 bachInCivilEngineering.description: Polytechnic School of the University of São Paulo (POLI-USP–Brazil). 2013—2015. Unfinished.
 experience: Experience

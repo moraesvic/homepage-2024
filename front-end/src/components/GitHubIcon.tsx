@@ -15,6 +15,7 @@ export const GitHubIcon = ({
       style={{
         backgroundColor: bgColor,
       }}
+      title="GitHub"
     >
       <svg
         width={width}

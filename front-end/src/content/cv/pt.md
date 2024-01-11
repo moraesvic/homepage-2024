@@ -2,7 +2,7 @@
 head.title: currículo
 jobTitle: Engenheiro de Software Full Stack
 introduction.title: Introdução
-introduction.text: Eng. software trabalhando com full stack.
+introduction.text: Eu crio aplicações web e pipelines de dados para aumentar a eficiência corporativa e entregar valor estratégico.
 techStack.title: Tech stack
 techStack.other.title: Outros
 techStack.other.text: Tailwind, SCSS/Sass, Figma, TDD (Jest, xUnit), WebSockets, REST APIs, Git, DynamoDB, MongoDB, Nginx, web scraping, Selenium, Pandas, FastAPI, Flask, Linux, Bash, Clean Code, SOLID, CI/CD, Haskell, Clojure, algoritmos e estruturas de dados, ...
@@ -12,12 +12,12 @@ portuguese: Português
 spanish: Espanhol
 german: Alemão
 visaStatus.title: Visa status
-visaStatus.text: Cidadão brasileiro disposto a trabalhar fora do país (um visto de trabalho seria requerido).
+visaStatus.text: Cidadão brasileiro disposto a trabalho remoto ou relocação.
 education: Educação
 bachLinguistics.title: Bach. em Letras
 bachLinguistics.description: "Faculdade de Filosofia, Letras e Ciências Humanas (FFLCH). Universidade de São Paulo (USP–Brasil). 2016 — 2020."
 exchangeProgram.title: Intercâmbio acadêmico
-exchangeProgram.description: Freie Universität Berlin, Alemanha. 1 semestre. Bolsa concedida por excelência acadêmica.
+exchangeProgram.description: Freie Universität Berlin, Alemanha. 1 semestre. Bolsa concedida por excelência acadêmica. 2020.
 bachCivilEngineering.title: Bach. Engenharia Civil
 bachInCivilEngineering.description: Escola Politécnica da Universidade de São Paulo (POLI-USP–Brasil). 2013—2015. Não concluído.
 experience: Experiência

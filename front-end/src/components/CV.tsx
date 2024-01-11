@@ -19,7 +19,7 @@ const H3 = (
 const Company = (
   props: Omit<React.HTMLAttributes<HTMLDivElement>, "className" | "style">
 ) => {
-  return <div className="my-5" {...props} />;
+  return <div className="mb-8" {...props} />;
 };
 
 const CompanyHeader = ({
@@ -27,20 +27,24 @@ const CompanyHeader = ({
   name,
   location,
   period,
+  url,
 }: {
   title: string;
   name: string;
   location: string;
   period: string;
+  url: string;
 }) => {
   return (
-    <div className="mb-2">
-      <p className="text-base font-bold mr-1 tracking-tight">
-        {title} @ {name}
-      </p>
-      <p className="text-sm">
-        {location} | {period}
-      </p>
+    <div className="my-2">
+      <a href={url}>
+        <p className="text-base font-bold mr-1 tracking-tight">
+          {title} @ {name}
+        </p>
+        <p className="text-sm">
+          {location} | {period}
+        </p>
+      </a>
     </div>
   );
 };
@@ -49,15 +53,24 @@ const ProjectDescription = ({
   title,
   description,
   Technologies,
+  url,
 }: {
   title: string;
   description: string;
   Technologies: Array<() => JSX.Element>;
+  url?: string;
 }) => {
   return (
-    <p className="text-sm mb-1">
+    <p className="text-sm my-2">
       <span className="mr-1">
-        <strong>{title}</strong> {description}
+        {url !== undefined ? (
+          <a href={url}>
+            <strong>{title}</strong>
+          </a>
+        ) : (
+          <strong>{title}</strong>
+        )}
+        &nbsp;<span>{description}</span>
       </span>
       <span>
         {Technologies.map((Tech, idx) => (
@@ -96,6 +109,7 @@ const BCG = (t: CVProps) => {
         name={t["bcg.companyName"]}
         location={t["bcg.location"]}
         period={t["bcg.period"]}
+        url="https://www.bcg.com"
       />{" "}
       <ProjectDescription
         title={t["bcg.items.0.title"]}
@@ -132,6 +146,7 @@ const Labic = (t: CVProps) => {
         name={t["labic.companyName"]}
         location={t["labic.location"]}
         period={t["labic.period"]}
+        url="https://www.innovacionciudadana.org/en/"
       />{" "}
       <ProjectDescription
         title={t["labic.items.0.title"]}
@@ -234,10 +249,12 @@ const CV = (t: CVProps) => {
                     name={t["brickAbode.companyName"]}
                     location={t["brickAbode.location"]}
                     period={t["brickAbode.period"]}
+                    url="https://www.brickabode.com/"
                   />{" "}
                   <ProjectDescription
                     title={t["brickAbode.items.0.title"]}
                     description={t["brickAbode.items.0.description"]}
+                    url="https://github.com/Jellyfish-Insights"
                     Technologies={[
                       Pills.DotNet,
                       Pills.Postgres,
@@ -249,6 +266,7 @@ const CV = (t: CVProps) => {
                   <ProjectDescription
                     title={t["brickAbode.items.1.title"]}
                     description={t["brickAbode.items.1.description"]}
+                    url="https://www.linkedin.com/company/sericin-limited/about/"
                     Technologies={[
                       Pills.Javascript,
                       Pills.Typescript,

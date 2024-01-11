@@ -17,6 +17,7 @@ export const LinkedInIcon = ({
       style={{
         backgroundColor: bgColor,
       }}
+      title="LinkedIn"
     >
       <svg
         width={width}

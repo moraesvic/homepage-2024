@@ -15,6 +15,7 @@ export const EmailIcon = ({
       style={{
         backgroundColor: bgColor,
       }}
+      title="Email"
     >
       <svg
         fill={fill}
