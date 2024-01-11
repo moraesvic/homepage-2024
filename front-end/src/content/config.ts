@@ -8,6 +8,7 @@ type Lang = {
 const HomeSchema = z.object({
   jobTitle: z.string(),
   cv: z.string(),
+  "introduction.text": z.string(),
 });
 
 const homeCollection = defineCollection({

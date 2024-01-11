@@ -182,7 +182,7 @@ const CV = (t: CVProps) => {
               <div className="flex gap-2 items-center text-center mb-2">
                 <LinkedInIcon
                   fill1={Colors.text}
-                  fill2={Colors.bg}
+                  fill2={Colors.fill}
                   bgColor={Colors.bg}
                   size={26}
                 />
