@@ -21,12 +21,12 @@ module cloudfront {
   source =  "./modules/cloudfront"
   project_name = local.project_name
   main_bucket = {
-    id = module.s3.main_bucket.id
-    arn = module.s3.main_bucket.arn
-    regional_domain_name = module.s3.main_bucket.bucket_regional_domain_name
+    id = module.s3.main.id
+    arn = module.s3.main.arn
+    regional_domain_name = module.s3.main.bucket_regional_domain_name
   }
   logs_bucket = {
-    regional_domain_name = module.s3.logs_bucket.bucket_regional_domain_name
+    regional_domain_name = module.s3.cloudfront_logs.bucket_regional_domain_name
   }
   viewer_request_lambda = {
     qualified_arn = module.lambda_at_edge.lambda_at_edge.qualified_arn
