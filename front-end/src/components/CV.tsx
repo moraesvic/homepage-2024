@@ -165,7 +165,7 @@ const Labic = (t: CVProps) => {
 const CV = (t: CVProps) => {
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="w-full rounded p-2 lg:p-8 bg-slate-950 bg-opacity-80 text-slate-100 grid place-items-center">
+      <div className="w-full rounded p-2 md:px-12 md:py-8 lg:p-8 bg-slate-950 bg-opacity-80 text-slate-100 grid place-items-center">
         <div
           className="grid gap-x-2 lg:gap-x-8"
           style={{ gridTemplateColumns: "minmax(0, 45fr) minmax(0, 55fr)" }}

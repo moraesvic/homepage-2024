@@ -65,7 +65,7 @@ export const Home = (t: HomeProps) => {
           <div className="text-lg font-light">{t["introduction.text"]}</div>
         </div>
         <div className="flex flex-col gap-2 items-center">
-          <div className="text-xl">
+          <div className="text-xl font-semibold">
             <a href={`/${t.lang}/cv`}>{t.cv}</a>
           </div>
           <div className="flex gap-4">
@@ -87,8 +87,28 @@ export const Home = (t: HomeProps) => {
         </div>
       </div>
       <div className="flex flex-col gap-8">
-        <div>
-          <Block title="Bio" Content={() => <TextRenderer nodes={t.bio} />} />
+        <div className="flex flex-col gap-8">
+          <Block
+            title={t["bio.title"]}
+            Content={() => <TextRenderer nodes={t.bio} />}
+          />
+          <div className="pl-8 text-lg text-white font-bold">
+            <a
+              href={`/${t.lang}/cv`}
+              className="inline-flex items-center gap-4"
+            >
+              <div>➵</div>
+              <div>{t.fullCV}</div>
+            </a>
+          </div>
+          <Block
+            title={t["experience.title"]}
+            Content={() => <TextRenderer nodes={t.bio} />}
+          />
+          <Block
+            title={t["projects.title"]}
+            Content={() => <TextRenderer nodes={t.bio} />}
+          />
         </div>
         <div>
           <div className="px-16 py-8">

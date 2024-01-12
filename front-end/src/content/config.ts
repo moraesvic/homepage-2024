@@ -23,8 +23,14 @@ const HomeSchema = z.object({
   jobTitle: z.string(),
   cv: z.string(),
   "introduction.text": z.string(),
+  "bio.title": z.string(),
   bio: TextNode.array().array(),
+  fullCV: z.string(),
+  "experience.title": z.string(),
   experience: TextNode.array().array(),
+  "projects.title": z.string(),
+  "projects.intro": z.string(),
+  projects: TextNode.array().array(),
   builtWith: TextNode.array().array(),
 });
 

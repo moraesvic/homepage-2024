@@ -5,6 +5,6 @@
 @media (width>768px) {
   ._grid {
     @apply grid gap-x-12;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 8fr 15fr;
   }
 }

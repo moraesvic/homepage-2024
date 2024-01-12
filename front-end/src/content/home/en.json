@@ -1,6 +1,7 @@
 {
   "jobTitle": "Software Engineer at Boston Consulting Group",
   "introduction.text": "I create web applications and data pipelines to increase corporate efficiency and deliver strategic value.",
+  "bio.title": "Bio",
   "bio": [
     [
       {
@@ -90,7 +91,12 @@
       }
     ]
   ],
+  "fullCV": "Check my full CV here",
+  "experience.title": "Experience",
   "experience": [],
+  "projects.title": "Projects",
+  "projects.intro": "TODO",
+  "projects": [],
   "builtWith": [
     [
       {

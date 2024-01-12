@@ -1,16 +1,17 @@
 {
 	"jobTitle": "Engenheiro de Software em Boston Consulting Group",
 	"introduction.text": "Eu crio aplicações web e pipelines de dados para aumentar a eficiência corporativa e entregar valor estratégico.",
+	"bio.title": "Bio",
 	"bio": [
 		[
 			{
 				"type": "text",
-				"text": "I've been fascinated with computers since I was a kid. In my teenage years, I dabbled with Pascal and Ruby and created some text-based games inspired by "
+				"text": "Meu fascínio por computadores vem desde a infância. Na adolescência, eu brinquei um pouco com Pascal e Ruby, criando jogos de console baseados em texto, inspirados por "
 			},
 			{
 				"type": "link",
 				"text": "Dwarf Fortress",
-				"url": "https://en.wikipedia.org/wiki/Dwarf_Fortress"
+				"url": "https://pt.wikipedia.org/wiki/Dwarf_Fortress"
 			},
 			{
 				"type": "text",
@@ -20,29 +21,29 @@
 		[
 			{
 				"type": "text",
-				"text": "In college I became more serious about programming, learning Python, developing numerical solving tools, "
+				"text": "Na faculdade me tornei mais sério a respeito da programação, aprendendo Python, desenvolvendo ferramentas de cálculo numérico, "
 			},
 			{
 				"type": "link",
-				"text": "simple animations",
+				"text": "animações simples",
 				"url": "https://www.youtube.com/watch?v=fplE6zBv0q4"
 			},
 			{
 				"type": "text",
-				"text": ", taking part in "
+				"text": ", participando de "
 			},
 			{
 				"type": "link",
-				"text": "Artificial Intelligence study groups",
+				"text": "grupos de estudo em Inteligência Artificial",
 				"url": "https://sitegrupoturing.netlify.app/"
 			},
 			{
 				"type": "text",
-				"text": " and "
+				"text": " e "
 			},
 			{
 				"type": "link",
-				"text": "attending cryptography events",
+				"text": "indo em eventos sobre criptografia e segurança nas redes",
 				"url": "https://2023.cryptorave.org/"
 			},
 			{
@@ -53,25 +54,25 @@
 		[
 			{
 				"type": "text",
-				"text": "In my professional life, I have had the priviledge of working in "
+				"text": "Na minha vida profissional, eu tive o privilégio de trabalhar em "
 			},
 			{
 				"type": "link",
-				"text": "a government agency",
+				"text": "um órgão do governo alemão",
 				"url": "https://www.dwih-saopaulo.org"
 			},
 			{
 				"type": "text",
-				"text": ", in "
+				"text": ", em "
 			},
 			{
 				"type": "link",
-				"text": "a software house",
+				"text": "uma software house",
 				"url": "https://www.brickabode.com/"
 			},
 			{
 				"type": "text",
-				"text": " and in a "
+				"text": " e em uma consultoria "
 			},
 			{
 				"type": "link",
@@ -80,17 +81,22 @@
 			},
 			{
 				"type": "text",
-				"text": " consultancy firm."
+				"text": "."
 			}
 		],
 		[
 			{
 				"type": "text",
-				"text": "In my free time, you will find me learning languages (currently, Mandarin Chinese), swimming, running, and singing at karaokes."
+				"text": "No meu tempo livre, gosto de estudar idiomas (atualmente aprendendo chinês), de nadar, correr, e cantar karaokê."
 			}
 		]
 	],
+	"fullCV": "Veja aqui meu currículo completo",
+	"experience.title": "Experiência",
 	"experience": [],
+	"projects.title": "Projetos",
+	"projects.intro": "TODO",
+	"projects": [],
 	"builtWith": [
 		[
 			{
