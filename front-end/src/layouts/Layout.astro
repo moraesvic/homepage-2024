@@ -18,12 +18,15 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body
-    style={{
-      background: "url(/paper.jpeg) no-repeat center center fixed",
-      backgroundSize: "cover",
-    }}
-  >
+  <style>
+    @media not print {
+      body {
+        background: url(/paper.jpeg) no-repeat center center fixed;
+        backgroundsize: cover;
+      }
+    }
+  </style>
+  <body>
     <div class="w-full p-2 text-white grid place-items-center">
       <div
         class="max-w-[108ch] flex flex-col gap-2"

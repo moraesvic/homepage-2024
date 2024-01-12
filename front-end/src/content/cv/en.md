@@ -44,4 +44,5 @@ labic.period: 2022-present (volunteer work)
 labic.items.0.title: Cosecha Colectiva
 labic.items.0.description: crowdfunding platform for social banking initiative in rural Mexico
 footer.backToMainPage: Back to main page
+downloadCV: Download CV
 ---

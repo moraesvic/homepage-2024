@@ -102,6 +102,7 @@ const CVSchema = z.object({
   "labic.items.0.title": z.string(),
   "labic.items.0.description": z.string(),
   "footer.backToMainPage": z.string(),
+  downloadCV: z.string(),
 });
 
 const cvCollection = defineCollection({

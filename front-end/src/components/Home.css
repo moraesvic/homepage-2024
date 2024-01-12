@@ -1,9 +1,9 @@
-._grid {
+#_grid {
   @apply flex flex-col gap-8;
 }
 
 @media (width>768px) {
-  ._grid {
+  #_grid {
     @apply grid gap-x-12;
     grid-template-columns: 8fr 15fr;
   }

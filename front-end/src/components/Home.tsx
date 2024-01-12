@@ -185,7 +185,10 @@ const Experiences = (props: { experiences: Experience[] }) => {
 
 export const Home = (t: HomeProps) => {
   return (
-    <div className="_grid min-h-screen bg-slate-950 bg-opacity-90 p-4 sm:p-8 rounded">
+    <div
+      id="_grid"
+      className="min-h-screen bg-slate-950 bg-opacity-90 p-4 sm:p-8 rounded"
+    >
       <div className="flex flex-col gap-12 md:gap-24">
         <div className="flex flex-col gap-4">
           <div>

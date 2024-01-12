@@ -8,6 +8,10 @@ import { LinkedInIcon } from "./LinkedInIcon";
 import { EmailIcon } from "./EmailIcon";
 import { Colors } from "./Colors";
 
+import { FaSave } from "react-icons/fa";
+
+import "./CV.css";
+
 const H2 = (
   props: Omit<React.HTMLAttributes<HTMLHeadingElement>, "className">
 ) => <h2 className="bg-gray-300 font-bold text-lg p-2" {...props} />;
@@ -165,7 +169,7 @@ const Labic = (t: CVProps) => {
 const CV = (t: CVProps) => {
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="w-full rounded p-2 md:px-12 md:py-8 lg:p-8 bg-slate-950 bg-opacity-90 text-slate-100 grid place-items-center">
+      <div className="w-full rounded p-2 md:px-12 md:pt-8 md:pb-4 bg-slate-950 bg-opacity-90 text-slate-100 grid place-items-center">
         <div
           className="grid gap-x-2 gap-y-4 lg:gap-x-8"
           style={{ gridTemplateColumns: "minmax(0, 45fr) minmax(0, 55fr)" }}
@@ -215,7 +219,7 @@ const CV = (t: CVProps) => {
             </a>
           </div>
 
-          <div className="flex col-span-2 flex-wrap lg:contents">
+          <div id="_columns" className="flex col-span-2 flex-wrap">
             <Column>
               <H2>{t["introduction.title"]}</H2>
               <Box>
@@ -292,9 +296,21 @@ const CV = (t: CVProps) => {
               </Box>
             </Column>
           </div>
+
+          <div className="flex justify-center col-span-2 print:hidden">
+            <a
+              className="px-4 py-1 rounded-lg border-1 border-solid border-white tracking-wider text-lg flex flex-col gap-2 items-center"
+              href={`/cv-${t.lang}.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaSave size={20} />
+              <span>{t.downloadCV}</span>
+            </a>
+          </div>
         </div>
       </div>
-      <div className="grid place-items-center bg-slate-950 bg-opacity-90 px-2 py-1">
+      <div className="grid place-items-center bg-slate-950 bg-opacity-90 px-2 py-1 print:hidden">
         <a href={`/${t.lang}`}>{t["footer.backToMainPage"]}</a>
       </div>
     </div>

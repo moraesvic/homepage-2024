@@ -1,0 +1,13 @@
+@media not print {
+  @media (width > 1024px) {
+    #_columns {
+      display: contents;
+    }
+  }
+}
+
+@media print {
+  #_columns {
+    display: contents;
+  }
+}

@@ -44,4 +44,5 @@ labic.period: 2022-presente (trabalho voluntário)
 labic.items.0.title: Cosecha Colectiva
 labic.items.0.description: plataforma de crowdfunding para iniciativa de bancos comunitários em zonas rurais do México
 footer.backToMainPage: Voltar para a página inicial
+downloadCV: Descarregar CV
 ---
