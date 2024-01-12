@@ -5,7 +5,7 @@ introduction.title: Introdução
 introduction.text: Eu crio aplicações web e pipelines de dados para aumentar a eficiência corporativa e entregar valor estratégico.
 techStack.title: Tech stack
 techStack.other.title: Outros
-techStack.other.text: Tailwind, SCSS/Sass, Figma, TDD (Jest, xUnit), WebSockets, REST APIs, Git, DynamoDB, MongoDB, Nginx, web scraping, Selenium, Pandas, FastAPI, Flask, Linux, Bash, Clean Code, SOLID, CI/CD, Haskell, Clojure, algoritmos e estruturas de dados, ...
+techStack.other.text: Tailwind, SCSS/Sass, Figma, TDD (Jest, xUnit), WebSockets, REST APIs, Git, DynamoDB, MongoDB, Nginx, web scraping, Selenium, Pandas, FastAPI, Flask, Linux, Bash, Clean Code, SOLID, CI/CD, Haskell, Clojure, GenAI, GPT, LLM, LangChain, algoritmos e estruturas de dados, ...
 languages.title: Idiomas
 english: Inglês
 portuguese: Português
