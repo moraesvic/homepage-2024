@@ -95,12 +95,12 @@
 	"experience.title": "Experiência",
 	"experiences": [
 		{
-			"start": "2019",
-			"end": "2021",
-			"company": "Centro Alemão de Ciência e Inovação",
-			"link": "https://www.dwih-saopaulo.org/",
-			"title": "Estagiário em Relações Públicas / Assistente de Projetos",
-			"description": "Assistência na organização de diversos eventos com até 1000 participantes da academia e indústria do Brasil e da Alemanha. Revisão do website, mídias sociais e materiais impressos."
+			"start": "2022",
+			"end": "Present",
+			"company": "BCG — The Boston Consulting Group",
+			"link": "https://www.bcg.com/",
+			"title": "Engenheiro de Software",
+			"description": "Trabalho fortemente associado às equipes de Data Science para criar ferramentas como dashboards, otimizações e simulações para clientes Fortune 500. Os projetos entregaram significativas melhores nas práticas de precificação e na satisfação dos consumidores."
 		},
 		{
 			"start": "2021",
@@ -111,12 +111,12 @@
 			"description": "Manutenção e desenvolvimento de sistemas ETL com dados de mídias sociais para um think thank nos EUA. Desenvolvimento de um editor WYSIWYG customizado para uma empresa do setor imobiliário em Hong Kong."
 		},
 		{
-			"start": "2022",
-			"end": "Present",
-			"company": "BCG — The Boston Consulting Group",
-			"link": "https://www.bcg.com/",
-			"title": "Engenheiro de Software",
-			"description": "Trabalho fortemente associado às equipes de Data Science para criar ferramentas como dashboards, otimizações e simulações para clientes Fortune 500. Os projetos entregaram significativas melhores nas práticas de precificação e na satisfação dos consumidores."
+			"start": "2019",
+			"end": "2021",
+			"company": "Centro Alemão de Ciência e Inovação",
+			"link": "https://www.dwih-saopaulo.org/",
+			"title": "Estagiário em Relações Públicas / Assistente de Projetos",
+			"description": "Assistência na organização de diversos eventos com até 1000 participantes da academia e indústria do Brasil e da Alemanha. Revisão do website, mídias sociais e materiais impressos."
 		}
 	],
 	"projects.title": "Projetos",

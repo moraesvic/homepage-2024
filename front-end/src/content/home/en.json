@@ -95,12 +95,12 @@
   "experience.title": "Experience",
   "experiences": [
     {
-      "start": "2019",
-      "end": "2021",
-      "company": "German Center for Research and Innovation",
-      "link": "https://www.dwih-saopaulo.org/",
-      "title": "Intern for Public Relations / Project Assistant",
-      "description": "Assistance at the organization of several events with up to 1000 participants from Brazilian and German academia and industry. Review of the website, social media and printed materials."
+      "start": "2022",
+      "end": "Present",
+      "company": "BCG — The Boston Consulting Group",
+      "link": "https://www.bcg.com/",
+      "title": "Software Engineer",
+      "description": "Worked closely with Data Science teams to provide several Fortune 500 clients with internal tools such as dashboards, optimizations and simulations, improving pricing practices and customer satisfaction."
     },
     {
       "start": "2021",
@@ -111,12 +111,12 @@
       "description": "Maintenance and development of ETL systems with data from social media for a think tank in the US. Development of a custom WYSIWYG editor for a real-estate company in Hong Kong."
     },
     {
-      "start": "2022",
-      "end": "Present",
-      "company": "BCG — The Boston Consulting Group",
-      "link": "https://www.bcg.com/",
-      "title": "Software Engineer",
-      "description": "Worked closely with Data Science teams to provide several Fortune 500 clients with internal tools such as dashboards, optimizations and simulations, improving pricing practices and customer satisfaction."
+      "start": "2019",
+      "end": "2021",
+      "company": "German Center for Research and Innovation",
+      "link": "https://www.dwih-saopaulo.org/",
+      "title": "Intern for Public Relations / Project Assistant",
+      "description": "Assistance at the organization of several events with up to 1000 participants from Brazilian and German academia and industry. Review of the website, social media and printed materials."
     }
   ],
   "projects.title": "Projects",
