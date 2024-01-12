@@ -1,4 +1,4 @@
-import type { HomeProps, TextNode } from "../content/config";
+import type { Experience, HomeProps, TextNode } from "../content/config";
 import { Colors } from "./Colors";
 import { EmailIcon } from "./EmailIcon";
 import { GitHubIcon } from "./GitHubIcon";
@@ -64,7 +64,7 @@ type ProjectProps = {
 
 const Pill = (props: { children?: React.ReactNode }) => {
   return (
-    <div className="text-xs px-2 py-1 bg-teal-400 text-black rounded-full">
+    <div className="text-xs px-2 py-1 bg-teal-500 text-black rounded-full">
       {props.children}
     </div>
   );
@@ -123,11 +123,12 @@ const flashcardFactory: ProjectPropsWithoutDescription = {
 };
 
 const michelangelo: ProjectPropsWithoutDescription = {
-  title: "Micheangelo",
+  title: "Michelangelo",
   link: "https://github.com/moraesvic/michelangelo",
   pic: "/project-3.png",
   technologies: [
     "Python",
+    "Flask",
     "Javascript",
     "React",
     "PostgreSQL",
@@ -148,6 +149,38 @@ const snowAnimation: ProjectPropsWithoutDescription = {
   link: "https://github.com/moraesvic/html-canvas-snow-animation",
   pic: "/project-5.png",
   technologies: ["Vanilla Javascript", "HTML Canvas", "Vanilla CSS"],
+};
+
+const Experience = (props: Experience) => {
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="leading-tight">
+        <div className="uppercase tracking-wider text-sm">
+          {props.start}&mdash;{props.end}
+        </div>
+        <div>
+          <a
+            href={props.link}
+            className="text-indigo-300 font-semibold text-lg"
+          >
+            {props.company}
+          </a>
+        </div>
+        <div className="font-light text-sm text-indigo-200">{props.title}</div>
+      </div>
+      <div className="font-light">{props.description}</div>
+    </div>
+  );
+};
+
+const Experiences = (props: { experiences: Experience[] }) => {
+  return (
+    <div className="flex flex-col gap-8">
+      {props.experiences.map((xp) => (
+        <Experience key={xp.company + xp.title} {...xp} />
+      ))}
+    </div>
+  );
 };
 
 export const Home = (t: HomeProps) => {
@@ -198,7 +231,7 @@ export const Home = (t: HomeProps) => {
             </a>
           </div>
           <Block title={t["experience.title"]}>
-            <TextRenderer nodes={t.bio} />
+            <Experiences experiences={t.experiences} />
           </Block>
           <Block title={t["projects.title"]}>
             <p>

@@ -24,9 +24,11 @@ const ExperienceSchema = z.object({
   end: z.string(),
   company: z.string(),
   link: z.string(),
+  title: z.string(),
   description: z.string(),
-  technologies: z.string().array(),
 });
+
+export type Experience = z.infer<typeof ExperienceSchema>;
 
 const HomeSchema = z.object({
   jobTitle: z.string(),
@@ -36,7 +38,7 @@ const HomeSchema = z.object({
   bio: TextNode.array().array(),
   fullCV: z.string(),
   "experience.title": z.string(),
-  experience: ExperienceSchema.array(),
+  experiences: ExperienceSchema.array(),
   "projects.title": z.string(),
   "projects.caveat": z.string(),
   "projects.intro": z.string(),
