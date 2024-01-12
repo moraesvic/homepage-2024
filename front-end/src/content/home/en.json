@@ -95,51 +95,12 @@
   "experience.title": "Experience",
   "experience": [],
   "projects.title": "Projects",
-  "projects.intro": "TODO",
-  "projects": [],
-  "builtWith": [
-    [
-      {
-        "type": "text",
-        "text": "Built with "
-      },
-      {
-        "type": "link",
-        "text": "Astro",
-        "url": "https://astro.build/"
-      },
-      {
-        "type": "text",
-        "text": ", "
-      },
-      {
-        "type": "link",
-        "text": "React",
-        "url": "https://react.dev/"
-      },
-      {
-        "type": "text",
-        "text": " & "
-      },
-      {
-        "type": "link",
-        "text": "TailwindCSS",
-        "url": "https://tailwindcss.com/"
-      },
-      {
-        "type": "text",
-        "text": ". Deployed to "
-      },
-      {
-        "type": "link",
-        "text": "Amazon Web Services (AWS)",
-        "url": "https://aws.amazon.com"
-      },
-      {
-        "type": "text",
-        "text": "."
-      }
-    ]
-  ],
+  "projects.caveat": "Caveat",
+  "projects.intro": "For confidenciality reasons, I cannot showcase work delivered to most clients. The work below was developed in my spare time over several years, so its consistency can vary. Please also note that I'm not a designer, so things can look a bit ugly.",
+  "projects.homepage": "This is the source code for this very page you are visualizing. Includes Terraform scripts and a Lambda@Edge function.",
+  "projects.flashcard-factory": "I was studying Chinese and I decided it was too much trouble to type the transcriptions and record audio for every flashcard I created. So I decided to automate it.",
+  "projects.michelangelo": "A department store for all your Renaissance needs (a full-stack minified solution for an e-commerce).",
+  "projects.neologism-generator": "Creates funny and poetic words by applying a Markov process on word lists for several languages.",
+  "projects.snow-animation": "A web animation of snow falling into a windy atmosphere.",
   "cv": "Résumé"
 }

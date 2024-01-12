@@ -12,7 +12,7 @@ portuguese: Portuguese
 spanish: Spanish
 german: German
 visaStatus.title: Visa status
-visaStatus.text: A Brazilian citizen willing to work remotely relocate.
+visaStatus.text: A Brazilian citizen willing to work remotely or to relocate.
 education: Education
 bachLinguistics.title: Bach. Linguistics
 bachLinguistics.description: "Faculty of Philosophy, Philology and Human Sciences (FFLCH). University of São Paulo (USP–Brazil). 2016 — 2020."

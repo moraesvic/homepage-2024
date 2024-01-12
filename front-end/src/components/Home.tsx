@@ -5,10 +5,11 @@ import { GitHubIcon } from "./GitHubIcon";
 import { LinkedInIcon } from "./LinkedInIcon";
 
 import "./Home.css";
+import type React from "react";
 
 type BlockProps = {
   title: string;
-  Content: () => JSX.Element;
+  children?: React.ReactNode;
 };
 
 type LinkProps = {
@@ -30,7 +31,7 @@ const Block = (props: BlockProps) => {
       <h2 className="uppercase tracking-wider text-lg mb-4 text-indigo-300 font-semibold">
         {props.title}
       </h2>
-      <props.Content />
+      <div className="flex flex-col gap-4">{props.children}</div>
     </div>
   );
 };
@@ -53,9 +54,105 @@ const TextRenderer = ({ nodes }: { nodes: TextNode[][] }) => {
   );
 };
 
+type ProjectProps = {
+  title: string;
+  link: string;
+  pic: string;
+  description: string;
+  technologies: string[];
+};
+
+const Pill = (props: { children?: React.ReactNode }) => {
+  return (
+    <div className="text-xs px-2 py-1 bg-teal-400 text-black rounded-full">
+      {props.children}
+    </div>
+  );
+};
+
+const Project = (props: ProjectProps) => {
+  return (
+    <div
+      className="grid gap-x-4 items-center"
+      style={{ gridTemplateColumns: "max-content 1fr" }}
+    >
+      <a href={props.pic} target="_blank" rel="noopener noreferrer">
+        <img
+          src={props.pic}
+          alt={`Illustration of project "${props.title}"`}
+          width={160}
+          height={120}
+        />
+      </a>
+      <div className="flex flex-col gap-4">
+        <a href={props.link} className="text-indigo-300 font-semibold">
+          {props.title}
+        </a>
+        <div className="font-light">{props.description}</div>
+        <div className="flex gap-2 flex-wrap">
+          {props.technologies.map((tech) => (
+            <Pill key={tech}>{tech}</Pill>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+type ProjectPropsWithoutDescription = Omit<ProjectProps, "description">;
+
+const homepage: ProjectPropsWithoutDescription = {
+  title: "@moraesvic Homepage",
+  link: "https://github.com/moraesvic/homepage-2024",
+  pic: "/project-1.png",
+  technologies: [
+    "Typescript",
+    "Astro",
+    "React",
+    "TailwindCSS",
+    "Terraform",
+    "AWS",
+  ],
+};
+
+const flashcardFactory: ProjectPropsWithoutDescription = {
+  title: "Flashcard Factory",
+  link: "https://github.com/moraesvic/anki-flashcard-factory",
+  pic: "/project-2.png",
+  technologies: ["Go", "Docker", "FFMPEG", "AWS"],
+};
+
+const michelangelo: ProjectPropsWithoutDescription = {
+  title: "Micheangelo",
+  link: "https://github.com/moraesvic/michelangelo",
+  pic: "/project-3.png",
+  technologies: [
+    "Python",
+    "Javascript",
+    "React",
+    "PostgreSQL",
+    "Bash",
+    "Vanilla CSS",
+  ],
+};
+
+const neologismGenerator: ProjectPropsWithoutDescription = {
+  title: "Neologism Generator",
+  link: "https://github.com/moraesvic/neologism-generator",
+  pic: "/project-4.png",
+  technologies: ["C"],
+};
+
+const snowAnimation: ProjectPropsWithoutDescription = {
+  title: "Snow Animation",
+  link: "https://github.com/moraesvic/html-canvas-snow-animation",
+  pic: "/project-5.png",
+  technologies: ["Vanilla Javascript", "HTML Canvas", "Vanilla CSS"],
+};
+
 export const Home = (t: HomeProps) => {
   return (
-    <div className="_grid min-h-screen bg-slate-950 bg-opacity-80 p-4 sm:p-8 rounded">
+    <div className="_grid min-h-screen bg-slate-950 bg-opacity-90 p-4 sm:p-8 rounded">
       <div className="flex flex-col gap-12 md:gap-24">
         <div className="flex flex-col gap-4">
           <div>
@@ -88,10 +185,9 @@ export const Home = (t: HomeProps) => {
       </div>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-8">
-          <Block
-            title={t["bio.title"]}
-            Content={() => <TextRenderer nodes={t.bio} />}
-          />
+          <Block title={t["bio.title"]}>
+            <TextRenderer nodes={t.bio} />
+          </Block>
           <div className="pl-8 text-lg text-white font-bold">
             <a
               href={`/${t.lang}/cv`}
@@ -101,30 +197,50 @@ export const Home = (t: HomeProps) => {
               <div>{t.fullCV}</div>
             </a>
           </div>
-          <Block
-            title={t["experience.title"]}
-            Content={() => <TextRenderer nodes={t.bio} />}
-          />
-          <Block
-            title={t["projects.title"]}
-            Content={() => <TextRenderer nodes={t.bio} />}
-          />
+          <Block title={t["experience.title"]}>
+            <TextRenderer nodes={t.bio} />
+          </Block>
+          <Block title={t["projects.title"]}>
+            <p>
+              <span className="font-semibold">{t["projects.caveat"]}: </span>
+              <span className="font-light">{t["projects.intro"]}</span>
+            </p>
+            <Project
+              {...{ ...homepage, description: t["projects.homepage"] }}
+            />
+            <Project
+              {...{
+                ...flashcardFactory,
+                description: t["projects.flashcard-factory"],
+              }}
+            />
+            <Project
+              {...{
+                ...michelangelo,
+                description: t["projects.michelangelo"],
+              }}
+            />
+            <Project
+              {...{
+                ...neologismGenerator,
+                description: t["projects.neologism-generator"],
+              }}
+            />
+            <Project
+              {...{
+                ...snowAnimation,
+                description: t["projects.snow-animation"],
+              }}
+            />
+          </Block>
         </div>
         <div>
           <div className="px-16 py-8">
-            <hr className="opacity-80" />
+            <hr className="opacity-90" />
           </div>
-          <TextRenderer
-            nodes={[
-              [
-                ...t.builtWith[0],
-                {
-                  type: "text",
-                  text: ` © Victor Moraes, ${new Date().getFullYear()}.`,
-                },
-              ],
-            ]}
-          />
+          <div className="text-center">
+            &copy; Victor Moraes, {new Date().getFullYear()}.
+          </div>
         </div>
       </div>
     </div>

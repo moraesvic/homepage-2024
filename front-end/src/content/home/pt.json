@@ -95,51 +95,12 @@
 	"experience.title": "Experiência",
 	"experience": [],
 	"projects.title": "Projetos",
-	"projects.intro": "TODO",
-	"projects": [],
-	"builtWith": [
-		[
-			{
-				"type": "text",
-				"text": "Construído com "
-			},
-			{
-				"type": "link",
-				"text": "Astro",
-				"url": "https://astro.build/"
-			},
-			{
-				"type": "text",
-				"text": ", "
-			},
-			{
-				"type": "link",
-				"text": "React",
-				"url": "https://react.dev/"
-			},
-			{
-				"type": "text",
-				"text": " & "
-			},
-			{
-				"type": "link",
-				"text": "TailwindCSS",
-				"url": "https://tailwindcss.com/"
-			},
-			{
-				"type": "text",
-				"text": ". hospedado em "
-			},
-			{
-				"type": "link",
-				"text": "Amazon Web Services (AWS)",
-				"url": "https://aws.amazon.com"
-			},
-			{
-				"type": "text",
-				"text": "."
-			}
-		]
-	],
+	"projects.caveat": "Obs.",
+	"projects.intro": "Por motivos de confidencialidade, eu não posso exibir o trabalho que eu entreguei para a maioria dos clientes. Os projetos abaixo foram desenvolvidos no meu tempo livre ao longo de vários anos, então sua consistência pode variar. Também note que eu não sou designer, então às vezes esses projetos saem meio feios.",
+	"projects.homepage": "This is the source code for this very page you are visualizing. Includes Terraform scripts and Lambda@Edge function.",
+	"projects.flashcard-factory": "I was studying Chinese and I decided it was too much trouble to type the transcriptions and record audio for every flashcard I created. So I decided to automate it.",
+	"projects.michelangelo": "A department store for all your Renaissance needs (a full-stack minified solution for an e-commerce).",
+	"projects.neologism-generator": "Creates funny and poetic words by applying a Markov process on word lists for several languages.",
+	"projects.snow-animation": "A web animation of snow falling into a windy atmosphere.",
 	"cv": "Currículo"
 }

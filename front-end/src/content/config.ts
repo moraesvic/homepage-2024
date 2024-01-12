@@ -19,6 +19,15 @@ const TextNode = z.union([
 
 export type TextNode = z.infer<typeof TextNode>;
 
+const ExperienceSchema = z.object({
+  start: z.string(),
+  end: z.string(),
+  company: z.string(),
+  link: z.string(),
+  description: z.string(),
+  technologies: z.string().array(),
+});
+
 const HomeSchema = z.object({
   jobTitle: z.string(),
   cv: z.string(),
@@ -27,11 +36,15 @@ const HomeSchema = z.object({
   bio: TextNode.array().array(),
   fullCV: z.string(),
   "experience.title": z.string(),
-  experience: TextNode.array().array(),
+  experience: ExperienceSchema.array(),
   "projects.title": z.string(),
+  "projects.caveat": z.string(),
   "projects.intro": z.string(),
-  projects: TextNode.array().array(),
-  builtWith: TextNode.array().array(),
+  "projects.homepage": z.string(),
+  "projects.flashcard-factory": z.string(),
+  "projects.michelangelo": z.string(),
+  "projects.neologism-generator": z.string(),
+  "projects.snow-animation": z.string(),
 });
 
 const homeCollection = defineCollection({

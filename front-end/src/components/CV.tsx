@@ -165,15 +165,19 @@ const Labic = (t: CVProps) => {
 const CV = (t: CVProps) => {
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="w-full rounded p-2 md:px-12 md:py-8 lg:p-8 bg-slate-950 bg-opacity-80 text-slate-100 grid place-items-center">
+      <div className="w-full rounded p-2 md:px-12 md:py-8 lg:p-8 bg-slate-950 bg-opacity-90 text-slate-100 grid place-items-center">
         <div
-          className="grid gap-x-2 lg:gap-x-8"
+          className="grid gap-x-2 gap-y-4 lg:gap-x-8"
           style={{ gridTemplateColumns: "minmax(0, 45fr) minmax(0, 55fr)" }}
         >
-          <div className="text-2xl font-semibold">
-            <a href={`/${t.lang}`}>Victor Moraes</a>
+          <div>
+            <div className="text-2xl font-semibold">
+              <a href={`/${t.lang}`}>Victor Moraes</a>
+            </div>
+            <div className="text-base mb-1">{t.jobTitle}</div>
           </div>
-          <div className="row-span-2 flex items-center justify-start gap-2 lg:justify-between lg:gap-0 flex-wrap">
+
+          <div className="flex items-center justify-start gap-2 lg:justify-between lg:gap-0 flex-wrap">
             <a
               title="LinkedIn profile"
               href="https://www.linkedin.com/in/victor-moraes/"
@@ -210,7 +214,6 @@ const CV = (t: CVProps) => {
               </div>
             </a>
           </div>
-          <div className="text-base mb-1">{t.jobTitle}</div>
 
           <div className="flex col-span-2 flex-wrap lg:contents">
             <Column>
@@ -291,7 +294,7 @@ const CV = (t: CVProps) => {
           </div>
         </div>
       </div>
-      <div className="grid place-items-center bg-slate-950 bg-opacity-80 px-2 py-1">
+      <div className="grid place-items-center bg-slate-950 bg-opacity-90 px-2 py-1">
         <a href={`/${t.lang}`}>{t["footer.backToMainPage"]}</a>
       </div>
     </div>
