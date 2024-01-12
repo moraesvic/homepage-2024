@@ -35,3 +35,7 @@ type CloudFrontRecord = {
     request: CloudFrontRequest;
   };
 };
+
+export type CloudFrontEvent = {
+  Records?: CloudFrontRecord[];
+};

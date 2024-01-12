@@ -1,4 +1,9 @@
-import { CloudFrontRequest, CloudFrontResponse } from "./definitions";
+import { CLIENT_RENEG_LIMIT } from "tls";
+import {
+  CloudFrontEvent,
+  CloudFrontRequest,
+  CloudFrontResponse,
+} from "./definitions";
 
 export const RewriteURI = (uri: string): string => {
   if (uri === "/") {
@@ -43,4 +48,23 @@ export const RewriteRequest = (
   return { ...request, uri: newURI };
 };
 
-export const handler = RewriteRequest;
+export const handler = (e: CloudFrontEvent) => {
+  console.log("Received event:");
+  console.log(e);
+
+  const request = e.Records?.[0].cf?.request;
+
+  if (request === undefined) {
+    throw new Error("Unsupported event format.");
+  }
+
+  console.log("Request is:");
+  console.log(request);
+
+  const rewrittenRequest = RewriteRequest(request);
+
+  console.log("Request rewritten to:");
+  console.log(rewrittenRequest);
+
+  return rewrittenRequest;
+};
