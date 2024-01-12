@@ -48,9 +48,13 @@ export const RewriteRequest = (
   return { ...request, uri: newURI };
 };
 
-export const handler = (e: CloudFrontEvent) => {
+const print = (x: any) => {
+  console.log(JSON.stringify(x, null, 2));
+};
+
+export const handler = async (e: CloudFrontEvent) => {
   console.log("Received event:");
-  console.log(e);
+  print(e);
 
   const request = e.Records?.[0].cf?.request;
 
@@ -59,12 +63,12 @@ export const handler = (e: CloudFrontEvent) => {
   }
 
   console.log("Request is:");
-  console.log(request);
+  print(request);
 
   const rewrittenRequest = RewriteRequest(request);
 
   console.log("Request rewritten to:");
-  console.log(rewrittenRequest);
+  print(rewrittenRequest);
 
   return rewrittenRequest;
 };
