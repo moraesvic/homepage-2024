@@ -117,7 +117,7 @@ const homepage: ProjectPropsWithoutDescription = {
 
 const flashcardFactory: ProjectPropsWithoutDescription = {
   title: "Flashcard Factory",
-  link: "https://github.com/moraesvic/anki-flashcard-factory",
+  link: "https://github.com/moraesvic/flashcard-factory",
   pic: "/project-2.png",
   technologies: ["Go", "Docker", "FFMPEG", "AWS"],
 };
