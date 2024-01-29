@@ -9,7 +9,7 @@ type SkillsProps = {
 };
 export const Skills = ({ skills }: SkillsProps) => (
   <ul
-    className="grid gap-x-2 gap-y-[6px] my-3"
+    className="grid gap-x-2 gap-y-[4px] my-3 items-center"
     style={{ gridTemplateColumns: "min-content minmax(0, 1fr)" }}
   >
     {[...skills]
@@ -33,7 +33,7 @@ export const Skills = ({ skills }: SkillsProps) => (
             <div className="text-sm">{a.name}</div>
             <div
               style={{
-                height: "100%",
+                height: "90%",
                 width: `${a.percentage}%`,
                 background: `linear-gradient(45deg, ${color
                   .lighter()

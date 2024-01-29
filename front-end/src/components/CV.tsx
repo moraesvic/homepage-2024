@@ -11,14 +11,18 @@ import { Colors } from "./Colors";
 import { FaSave } from "react-icons/fa";
 
 import "./CV.css";
+import { getLanguageSkills } from "./languageSkills";
 
 const H2 = (
   props: Omit<React.HTMLAttributes<HTMLHeadingElement>, "className">
 ) => <h2 className="bg-gray-300 font-bold text-lg p-2" {...props} />;
 
-const H3 = (
-  props: Omit<React.HTMLAttributes<HTMLHeadingElement>, "className">
-) => <h3 className="font-bold text-base my-2" {...props} />;
+const H3 = ({
+  className,
+  ...rest
+}: React.HTMLAttributes<HTMLHeadingElement>) => (
+  <h3 className={clsx("font-bold text-base my-2", className)} {...rest} />
+);
 
 const Company = (
   props: Omit<React.HTMLAttributes<HTMLDivElement>, "className" | "style">
@@ -224,21 +228,36 @@ const CV = (t: CVProps) => {
               <H2>{t["introduction.title"]}</H2>
               <Box>
                 <p className="text-sm">{t["introduction.text"]}</p>
+                <a href="https://www.credly.com/badges/33bf2e2f-383f-4ade-878d-2f5d716bb7b5">
+                  <div
+                    className="my-4 grid gap-x-4 items-center"
+                    style={{ gridTemplateColumns: "max-content 1fr" }}
+                  >
+                    <img
+                      src="/aws-certified-solutions-architect-associate.png"
+                      width={60}
+                      alt={t["aws.alt"]}
+                    />
+                    <p className="text-sm">{t["aws.title"]}</p>
+                  </div>
+                </a>
+
                 <H3>{t["techStack.title"]}</H3>
                 <Skills skills={programmingSkills} />
-                <H3>{t["techStack.other.title"]}</H3>
-                <p className="text-xs">{t["techStack.other.text"]}</p>
+                <details className="print:hidden">
+                  <summary className="cursor-pointer">
+                    <H3 className="inline">{t["techStack.other.title"]}</H3>
+                  </summary>
+                  <p className="text-xs">{t["techStack.other.text"]}</p>
+                </details>
+                <div className="hidden print:block">
+                  <H3>{t["techStack.other.title"]}</H3>
+                  <p className="text-xs">{t["techStack.other.text"]}</p>
+                </div>
               </Box>
               <H2>{t["languages.title"]}</H2>
               <Box>
-                <Skills
-                  skills={[
-                    { name: t.portuguese, percentage: 100 },
-                    { name: t.english, percentage: 100 },
-                    { name: t.german, percentage: 90 },
-                    { name: t.spanish, percentage: 90 },
-                  ]}
-                />
+                <Skills skills={getLanguageSkills(t)} />
               </Box>
               <H2>{t["visaStatus.title"]}</H2>
               <Box>

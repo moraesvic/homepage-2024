@@ -61,6 +61,8 @@ const CVSchema = z.object({
   jobTitle: z.string(),
   "introduction.title": z.string(),
   "introduction.text": z.string(),
+  "aws.title": z.string(),
+  "aws.alt": z.string(),
   "techStack.title": z.string(),
   "techStack.other.title": z.string(),
   "techStack.other.text": z.string(),

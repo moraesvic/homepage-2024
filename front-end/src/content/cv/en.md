@@ -3,9 +3,11 @@ head.title: résumé
 jobTitle: Full Stack Software Engineer
 introduction.title: Introduction
 introduction.text: I create web applications and data pipelines to increase corporate efficiency and deliver strategic value.
+aws.title: Certified Solutions Architect Associate by Amazon Web Services (AWS).
+aws.alt: AWS Certificate badge
 techStack.title: Tech stack
 techStack.other.title: Other
-techStack.other.text: Tailwind, SCSS/Sass, Figma, TDD (Jest, xUnit), WebSockets, REST APIs, Git, DynamoDB, MongoDB, Nginx, web scraping, Selenium, Pandas, FastAPI, Flask, Linux, Bash, Clean Code, SOLID, CI/CD, Haskell, Clojure, GenAI, GPT, LLM, LangChain, algorithms & data structures, ...
+techStack.other.text: GCP (Google Cloud Platform), .NET (C#), Tailwind, SCSS/Sass, Figma, TDD (Jest, xUnit), WebSockets, REST APIs, Git, NoSQL (DynamoDB, Redis, MongoDB), Nginx, web scraping, Selenium, Pandas, FastAPI, Flask, Linux, Bash, Clean Code, SOLID, CI/CD, Haskell, Clojure, GenAI, GPT, LLM, LangChain, algorithms & data structures, ...
 languages.title: Languages
 english: English
 portuguese: Portuguese

@@ -87,6 +87,21 @@
     [
       {
         "type": "text",
+        "text": "In 2024, I earned an AWS certification for "
+      },
+      {
+        "type": "link",
+        "text": "Solutions Architect (Associate)",
+        "url": "https://www.credly.com/badges/33bf2e2f-383f-4ade-878d-2f5d716bb7b5"
+      },
+      {
+        "type": "text",
+        "text": ", attesting my solid understanding of how to leverage the cloud to build static and dynamic web applications, databases, to implement caching, security, and much more."
+      }
+    ],
+    [
+      {
+        "type": "text",
         "text": "In my free time, you will find me learning languages (currently, Mandarin Chinese), swimming, running, and singing at karaokes."
       }
     ]
